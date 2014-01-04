@@ -23,7 +23,7 @@ Now for pretty looks we need to install 2 fonts STYLBCC.ttf and Poky.ttf. if don
 Now go to http://weather.yahoo.com and search you city
 you will get a zip code of your city like '1915035' into urls.
 Now copy the zip code and open 'weather' file from downloads.
-file the line 'http://xml.weather.yahoo.com/forecastrss?w=1915035&u=c'
+search the line 'http://xml.weather.yahoo.com/forecastrss?w=1915035&u=c'
 replace code numbers with yours & save the file.
 
 Then open conky-startup.sh file and replace below line with ur conky files location
@@ -34,7 +34,7 @@ save the file.now add the 'xxx.sh' to start up application.
 
 Enjoy :)
 
-more details for installation<a href='http://hrshadhin.wordpress.com/2014/01/03/install-conky-conky-theme-seamod-mix-on-linux/' >Here</a>
+more details for installation <a href='http://hrshadhin.wordpress.com/2014/01/03/install-conky-conky-theme-seamod-mix-on-linux/' >Here</a>
 
 Screenshot:
 ==========
