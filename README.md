@@ -3,21 +3,22 @@ conky-theme-seamod-mix
 
 A conky theme that modify and customize from original conky-seamod theme.
 
-i have optimized it for 1366x768 resolution.you can edit it.
+    i have optimized it for 1366x768 resolution.you can edit it.
+Installation:
+============
 
-
-Package Dependencies : 
-lm-sensors ; hd-temp ; curl ; conky-all;dmidecode;
+ Package Dependencies
+ 
+     sudo apt-get install lm-sensors,hd-temp,curl,conky-all,dmidecode
 
 After installing above packages you need to change permission of following packages
 
-sudo chmod u+s /usr/sbin/hddtemp
-sudo chmod u+s /usr/sbin/dmidecode
+    sudo chmod u+s /usr/sbin/hddtemp
+    sudo chmod u+s /usr/sbin/dmidecode
 
 *other wise hdd tempeture & main board info + tempeture won't work
  
-Now for pretty look we need to install 2 fonts STYLBCC.ttf and Poky.ttf. if don't know how to install it,then follow this link.
-http://www.wikihow.com/Install-TrueType-Fonts-on-Ubuntu
+Now for pretty looks we need to install 2 fonts STYLBCC.ttf and Poky.ttf. if don't know how to install it,then follow this link.<a href='http://www.wikihow.com/Install-TrueType-Fonts-on-Ubuntu' >Here</a>
 
 Now go to http://weather.yahoo.com and search you city
 you will get a zip code of your city like '1915035' into urls.
@@ -33,6 +34,11 @@ save the file.now add the 'xxx.sh' to start up application.
 
 Enjoy :)
 
-if you have any problem u can mail me.
+more details for installation<a href='http://hrshadhin.wordpress.com/2014/01/03/install-conky-conky-theme-seamod-mix-on-linux/' >Here</a>
+
+Screenshot:
+==========
+<img src='img.png' alt='image' />
+
 
 
