@@ -1,0 +1,66 @@
+######################
+# - Conky settings - #
+######################
+update_interval 1
+total_run_times 0
+net_avg_samples 1
+cpu_avg_samples 1
+background yes
+
+imlib_cache_size 0
+double_buffer yes
+no_buffers yes
+
+#####################
+# - Text settings - #
+#####################
+use_xft yes
+xftfont Dinreg:size=180
+override_utf8_locale yes
+text_buffer_size 2048
+xftalpha 0.9
+
+#############################
+# - Window specifications - #
+#############################
+background yes
+
+own_window yes
+own_window_type normal
+own_window_transparent yes
+own_window_colour 000000
+own_window_argb_visual yes
+own_window_argb_value 0
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+alignment top_middle
+gap_x 0
+gap_y 80
+minimum_size 290 280
+
+
+default_bar_size 60 8
+
+#########################
+# - Graphics settings - #
+#########################
+draw_shades no
+
+default_color BDB5A1
+default_shade_color 1d1d1d
+color0 ffffff
+color2 D6713C
+color1 00FF00
+color3 00BFFF
+color4 FF00FF
+
+TEXT
+${voffset -220}${offset 90}${font Dinreg:size=15}${color2}${time %B.%d.%Y}
+${offset 90}${color1}${time %T} ${font Dinreg:size=13}${color1}${if_match ${time %H}<12}AM${else}${if_match ${time %H}>12}PM${endif}${endif} ${time %Z}
+${hr 2}
+${offset 50}${font Dinreg:size=20}${color3}Dhaka,BD Weather
+${font Dinreg:size=20}${color0}${execi 2 curl --silent "http://xml.weather.yahoo.com/forecastrss?w=1915035&u=c" | grep -A1 "<b>Current" | awk -F: '/C<BR/' | awk '{print $1, $2}'
+}${execi 2 awk 'BEGIN { print "\302\260C"; }'}${offset 60}${font Dinreg:size=20}${color1}Now
+${font Dinreg:size=15}${color3}${execi 2 curl --silent "http://xml.weather.yahoo.com/forecastrss?w=1915035&u=c" | grep -A5 "<BR /><b>Forecast:</b><BR />" | awk -F: '/<br/' | awk '{print substr($0, 0, length($0)-5)}'}
+
+
